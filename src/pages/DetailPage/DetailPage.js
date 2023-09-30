@@ -6,4 +6,4 @@ export function DetailPage() {
             <p>DetailPage</p>
         </div>
     );
-};
+}

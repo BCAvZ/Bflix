@@ -5,16 +5,19 @@ import {DetailPage} from "./pages/DetailPage/DetailPage";
 import {NavBar} from "./components/NavBar/NavBar";
 import {Route, Routes} from "react-router-dom";
 
+
 function App() {
   return (
-    <div>
-        <NavBar/>
+    <div className="outer-container">
+        <section className="inner-container">
+            <NavBar/>
 
-        <Routes>
-            <Route path="/" element={<Home/>}/>
-            <Route path="/DetailPage" element={<DetailPage/>}/>
-            <Route path="/SearchResult" element={<SearchResult/>}/>
-        </Routes>
+            <Routes >
+                <Route path="/" element={<Home/>}/>
+                <Route path="/DetailPage" element={<DetailPage/>}/>
+                <Route path="/SearchResult" element={<SearchResult/>}/>
+            </Routes>
+        </section>
     </div>
   );
 }

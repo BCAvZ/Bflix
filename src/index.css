@@ -1,9 +1,10 @@
-body {
+* {
   margin: 0;
-
-}
-
-code {
+  padding: 0;
+  box-sizing: border-box;
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  monospace;
+
+  background-color: black;
 }
+

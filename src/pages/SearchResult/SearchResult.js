@@ -6,4 +6,4 @@ export function SearchResult() {
             <p>SearchResult</p>
         </div>
     );
-};
+}
