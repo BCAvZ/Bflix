@@ -8,10 +8,15 @@ export function NavBar() {
         <nav>
             <ul>
                 <li className="imageWrapper">
-                    <NavLink to="/"><img src={BFLIXLOGO} alt = "logo"/></NavLink>
+                    <NavLink to="/">
+                        <img src={BFLIXLOGO} alt = "logo"/>
+                    </NavLink>
                 </li>
-                <li className="homeButton"><NavLink to="/">Home</NavLink></li>
-                <li><NavLink to="/SearchResult">Search Result</NavLink></li>
+                <li className="homeButton">
+                    <NavLink to="/">Home</NavLink></li>
+                <li>
+                    <NavLink to="/SearchResult">Search</NavLink>
+                </li>
             </ul>
         </nav>
     );
