@@ -13,7 +13,6 @@ export function Home() {
                 axios.get("https://api.tvmaze.com/shows")
                     .then(response => {
                         setApiReturn(response.data)
-                        console.log(response.data)
                     })
             } catch(e) {
                 console.error(e)

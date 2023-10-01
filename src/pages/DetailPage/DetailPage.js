@@ -35,7 +35,6 @@ export function DetailPage() {
                 axios.get(`https://api.tvmaze.com/shows/${id}/seasons`)
                     .then(response => {
                         setApiReturnSeasons(response.data)
-                        console.log(response.data)
                     })
             } catch(e) {
                 console.error(e)
@@ -72,8 +71,10 @@ export function DetailPage() {
                         {apiReturnSeasons.map((show) => (
                             <div key={show.number}>
                                 <h4>Season {show.number}</h4>
-                                <div dangerouslySetInnerHTML={{ __html: show.summary }}
-                                     className="summary" />
+                                <div
+                                    dangerouslySetInnerHTML={{ __html: show.summary }}
+                                    className="summary"
+                                />
                                 <p>This season has {show.episodeOrder} episodes.</p>
                             </div>
                         ))}

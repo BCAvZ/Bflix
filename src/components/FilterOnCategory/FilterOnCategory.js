@@ -1,5 +1,7 @@
 import React from 'react';
 import './FilterOnCategory.css'
+import {NavLink} from "react-router-dom";
+
 
 export function FilterOnCategory({apiResult, category}) {
 
@@ -13,7 +15,9 @@ export function FilterOnCategory({apiResult, category}) {
                         <p>{category}</p>
                         <div className="categoryWrapper">
                             {filteredArray.map((show, index) => (
-                                <img key={index} src={show.image.medium} alt={show.name} />
+                                <NavLink to={`/${show.id}`} key={index}>
+                                    <img src={show.image.medium} alt={show.name} />
+                                </NavLink>
                             ))}
                         </div>
                     </article>
