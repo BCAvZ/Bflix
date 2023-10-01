@@ -2,30 +2,29 @@ import React, {useEffect, useState} from 'react';
 import "./SearchResult.css"
 import searchbarlookingglass from "../../assets/pictures/search.png"
 import axios from "axios";
+import {FilterShows} from "../../components/FilterOnCategory/FilterShows";
 
 export function SearchResult() {
-    const [searchTerm, setSearchTerm] = useState(''); // State for search input
-    const [counterValue, setCounterValue] = useState(0); // State for counter
-    const [apiReturn, setApiReturn] = useState({})
+    const [searchTerm, setSearchTerm] = useState('');
+    const [counterValue, setCounterValue] = useState(0);
+    const [apiReturn, setApiReturn] = useState([])
 
     const handleSubmit = (e) => {
         e.preventDefault()
-        fetchData(searchTerm, counterValue)
+        fetchData(searchTerm)
     }
 
     async function fetchData(searchTerm){
         try {
             axios.get(`https://api.tvmaze.com/search/shows?q=${searchTerm}`)
                 .then(response => {
-                    setApiReturn(response.data)
-                    console.log(response.data)
+                    setApiReturn(response.data.map(item => item.show));
                 })
         } catch(e) {
             console.error(e)
             alert('Failed to load! Please try again in 30 seconds, if it still fails the API might be down. Sorry for any inconvenience! Please try again tomorrow.')
         }
     }
-
 
     return (
         <div>
@@ -50,8 +49,9 @@ export function SearchResult() {
                     onChange={(e) => setCounterValue(e.target.value)}
                 />
             </div>
-
-
+            {apiReturn.length >= 0 &&
+                <FilterShows apiResult={apiReturn} minimumRating={counterValue} />
+            }
 
         </div>
     );

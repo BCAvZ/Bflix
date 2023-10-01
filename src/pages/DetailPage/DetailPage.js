@@ -51,7 +51,7 @@ export function DetailPage() {
                 <article>
                     <p>{apiReturnShow.category}</p>
                     <div className="categoryWrapper">
-                        <img src={apiReturnShow.image.medium} alt={apiReturnShow.name} />
+                        { apiReturnShow.image ? <img src={apiReturnShow.image.medium} alt={apiReturnShow.name} /> : <p>No image available of {apiReturnShow.name}</p>}
                         <div className="detailCard">
                             <h4>Genres</h4>
                             {apiReturnShow.genres + ''}

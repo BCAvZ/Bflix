@@ -1,5 +1,4 @@
 import React from 'react';
-import './FilterOnCategory.css'
 import {NavLink} from "react-router-dom";
 
 // This component demands an array as property apiResult however category and minimumRating ( the filters ) are both
@@ -25,13 +24,18 @@ export function FilterShows({
         return ratingCheck && categoryCheck
     });
 
+
+    console.log(minimumRating)
+
     return (
                     <article>
-                        <p>{category}</p>
+                        { category != null &&
+                            <p>{category}</p>
+                        }
                         <div className="categoryWrapper">
                             {filteredArray.map((show, index) => (
                                 <NavLink to={`/${show.id}`} key={index}>
-                                    <img src={show.image.medium} alt={show.name} />
+                                    { show.image ? <img src={show.image.medium} alt={show.name} /> : <p> No image available of {show.name} </p>}
                                 </NavLink>
                             ))}
                         </div>

@@ -5,7 +5,7 @@ import {FilterShows} from "../../components/FilterOnCategory/FilterShows";
 
 export function Home() {
 
-    const [apiReturn, setApiReturn] = useState({});
+    const [apiReturn, setApiReturn] = useState([]);
 
     useEffect(() => {
         async function fetchData(){
