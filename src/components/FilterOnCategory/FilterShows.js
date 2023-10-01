@@ -14,7 +14,7 @@ export function FilterShows({
 }) {
 
     const filteredArray = apiResult.filter(show => {
-        let ratingCheck = show => show.rating && show.rating.average >= {minimumRating};
+        let ratingCheck = show.rating && show.rating.average >= minimumRating;
 
         let categoryCheck = true;
         if (category) {
@@ -41,4 +41,4 @@ export function FilterShows({
                         </div>
                     </article>
     );
-};
+}
