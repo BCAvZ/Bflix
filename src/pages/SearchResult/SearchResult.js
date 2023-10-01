@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React, {useState} from 'react';
 import "./SearchResult.css"
 import searchbarlookingglass from "../../assets/pictures/search.png"
 import axios from "axios";
@@ -50,7 +50,9 @@ export function SearchResult() {
                 />
             </div>
             {apiReturn.length >= 0 &&
-                <FilterShows apiResult={apiReturn} minimumRating={counterValue} />
+                <div className="searchResultPage">
+                    <FilterShows apiResult={apiReturn} minimumRating={counterValue} />
+                </div>
             }
 
         </div>

@@ -7,7 +7,7 @@ section{
     height: 100%;
 }
 
-.categoryWrapper{
+.homePage .categoryWrapper{
     display: flex;
     flex-direction: row;
     justify-content: start;
@@ -16,7 +16,7 @@ section{
     overflow: auto;
 }
 
-p {
+.homePage p {
     padding: 10px;
     font-weight: bold;
 }

@@ -48,7 +48,7 @@ export function DetailPage() {
     return (
         <section>
             {apiReturnShow.name && apiReturnSeasons.length>0 ?
-                <article>
+                <article className="detailPage">
                     <p>{apiReturnShow.category}</p>
                     <div className="categoryWrapper">
                         { apiReturnShow.image ? <img src={apiReturnShow.image.medium} alt={apiReturnShow.name} /> : <p>No image available of {apiReturnShow.name}</p>}

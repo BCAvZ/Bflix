@@ -26,15 +26,18 @@ export function Home() {
     return (
         <section>
             {apiReturn.length>1 ?
-                <>
+                <div className="homePage">
                     <FilterShows apiResult = {apiReturn} category="Action"/>
                     <FilterShows apiResult = {apiReturn} category="Comedy"/>
                     <FilterShows apiResult = {apiReturn} category="Anime"/>
                     <FilterShows apiResult = {apiReturn} category="Science-Fiction"/>
                     <FilterShows apiResult = {apiReturn} category="Horror"/>
+                    <FilterShows apiResult = {apiReturn} category="Adventure"/>
                     <FilterShows apiResult = {apiReturn} category="Thriller"/>
                     <FilterShows apiResult = {apiReturn} category="Espionage"/>
-                </>
+                    <FilterShows apiResult = {apiReturn} category="Drama"/>
+                    <FilterShows apiResult = {apiReturn} category="Mystery"/>
+                </div>
                 :
                 <p>Loading ...</p>
             }

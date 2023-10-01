@@ -1,3 +1,11 @@
+.detailPage{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    flex-direction: column;
+}
+
 .categoryWrapper{
     display: flex;
     justify-content: center;

@@ -23,3 +23,18 @@ input[type=text]:focus {
     background-color: grey;
     box-shadow: 2px 2px 5px #fc894d;
 }
+
+.searchResultPage .categoryWrapper{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+    overflow: auto;
+}
+
+.searchResultPage p {
+    padding: 10px;
+    font-weight: bold;
+}
