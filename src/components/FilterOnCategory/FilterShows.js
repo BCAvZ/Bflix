@@ -24,9 +24,6 @@ export function FilterShows({
         return ratingCheck && categoryCheck
     });
 
-
-    console.log(minimumRating)
-
     return (
                     <article>
                         { category != null &&
