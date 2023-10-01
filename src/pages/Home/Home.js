@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import axios from "axios";
 import './Home.css'
-import {FilterOnCategory} from "../../components/FilterOnCategory/FilterOnCategory";
+import {FilterShows} from "../../components/FilterOnCategory/FilterShows";
 
 export function Home() {
 
@@ -27,13 +27,13 @@ export function Home() {
         <section>
             {apiReturn.length>1 ?
                 <>
-                    <FilterOnCategory apiResult = {apiReturn} category="Action"/>
-                    <FilterOnCategory apiResult = {apiReturn} category="Comedy"/>
-                    <FilterOnCategory apiResult = {apiReturn} category="Anime"/>
-                    <FilterOnCategory apiResult = {apiReturn} category="Science-Fiction"/>
-                    <FilterOnCategory apiResult = {apiReturn} category="Horror"/>
-                    <FilterOnCategory apiResult = {apiReturn} category="Thriller"/>
-                    <FilterOnCategory apiResult = {apiReturn} category="Espionage"/>
+                    <FilterShows apiResult = {apiReturn} category="Action"/>
+                    <FilterShows apiResult = {apiReturn} category="Comedy"/>
+                    <FilterShows apiResult = {apiReturn} category="Anime"/>
+                    <FilterShows apiResult = {apiReturn} category="Science-Fiction"/>
+                    <FilterShows apiResult = {apiReturn} category="Horror"/>
+                    <FilterShows apiResult = {apiReturn} category="Thriller"/>
+                    <FilterShows apiResult = {apiReturn} category="Espionage"/>
                 </>
                 :
                 <p>Loading ...</p>
