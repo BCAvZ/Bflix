@@ -20,7 +20,7 @@ li {
 
 .homeButton{
     display: flex;
-    justify-content: start;
+    justify-content: flex-start;
 }
 
 a {
