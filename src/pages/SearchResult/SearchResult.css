@@ -1,6 +1,17 @@
-/* Style the search box inside the navigation bar */
+.search-bar-looking-glass {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.rating-visual-rating-slider{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
 input[type=text] {
-    float: right;
     padding: 6px;
     border: none;
     margin-top: 8px;
