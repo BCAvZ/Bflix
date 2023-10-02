@@ -1,70 +1,35 @@
-# Getting Started with Create React App
+<h1>FlixB</h1> 
+FlixB is an app i've made for those suffering from choice paralysis on from the gigantic offer of all the streaming services of what to watch. The app with a similar layout to one of the populair services offers highly rated series filtered on category on the main page for those looking for inspiration, a detail page accessible anywhere through the app with a lot of information about the series of their choosing and a search function with optional minimum rating for those looking for something specific.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<h2>Architectural decisions</h2>
+I've chosen to use the framework React for this application. At this point in time it is the framework i know best and considering i've made this app with a deadline in mind it serves as the best way to show off my capabilities.
 
-## Available Scripts
+Vue is the framework i plan to make a hobby project in this month ( october ) to familiarize myself with it a bit. 
 
-In the project directory, you can run:
+Here are the modules i've used that are neccesary to run the app as developer:
 
-### `npm start`
+* "axios": "1.5.1",
+* "react-router-dom": "6.16.0",
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Axios is included purely for the GET requests to retrieve the required information from the API ( https://www.tvmaze.com/api#show-single-search ), react -router-dom is for navigation in the app. 
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+<h2>Deployment</h2>
+Cloning this repo > running npm install > running npm run build should suffice to get this application running.
+If you run into issues ensure you have the versions of the modules listen here installed in your package.json under dependencies.
 
-### `npm test`
+If you wish to purely see the app running i have it here on Netifly: https://bflixapp.netlify.app// 
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+![src](/src/assets/pictures/Example%20FlixB.PNG)
 
-### `npm run build`
+<h2>Testing instructions</h2>
+TBA
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+<h2>Wishlist</h2>
+There were a couple of features i would have liked to add to the application ( especially 1 and 2 ). However time is a limited resource, the deadline is 4th of october and i have chosen to prioritize 100% coverage from unit tests and gathering and implementing feedback ( when appropriate ) from end users with non-technical backgrounds.  
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+1. Actors listed on the detail screen
+2. Search and/or filter function based on actors ( api supports this )
+3. Dropdown menu on the detail page for the seasons & summary to declutter the page ( especially on mobile )
+4. Recommendations for series to watch based on the series the detail page is opened for.
+5. A where can i watch button linking directly to the respective page of the current streaming service that hosts a show. API currently does not support this but theoretically if there was an API or another webapp that specifically supports this it could be included.
