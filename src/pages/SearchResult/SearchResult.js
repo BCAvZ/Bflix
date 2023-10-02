@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import "./SearchResult.css"
 import searchbarlookingglass from "../../assets/pictures/search.png"
 import axios from "axios";
-import {FilterShows} from "../../components/FilterOnCategory/FilterShows";
+import {FilterShows} from "../../components/FilterShows/FilterShows";
 
 export function SearchResult() {
     const [searchTerm, setSearchTerm] = useState('');

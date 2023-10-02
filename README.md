@@ -30,7 +30,8 @@ There were a couple of features i would have liked to add to the application ( e
 
 1. Actors listed on the detail screen
 2. Search and/or filter function based on actors ( api supports this )
-3. Genre page with minimum rating slider. For those who purely want a 'curated' selection of their favorite genre.
-4. Dropdown menu on the detail page for the seasons & summary to declutter the page ( especially on mobile )
-5. Recommendations for series to watch based on the series the detail page is opened for.
-6. A where can i watch button linking directly to the respective page of the current streaming service that hosts a show. API currently does not support this but theoretically if there was an API or another webapp that specifically supports this it could be included.
+3. Weekly changing homepage content. A date function should be the trigger for the page number API endpoint.
+4. Genre page with minimum rating slider. For those who purely want a 'curated' selection of their favorite genre.
+5. Dropdown menu on the detail page for the seasons & summary to declutter the page ( especially on mobile )
+6. Recommendations for series to watch based on the series the detail page is opened for.
+7. A where can i watch button linking directly to the respective page of the current streaming service that hosts a show. API currently does not support this but theoretically if there was an API or another webapp that specifically supports this it could be included.

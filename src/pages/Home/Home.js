@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import axios from "axios";
 import './Home.css'
-import {FilterShows} from "../../components/FilterOnCategory/FilterShows";
+import {FilterShows} from "../../components/FilterShows/FilterShows";
 
 export function Home() {
 

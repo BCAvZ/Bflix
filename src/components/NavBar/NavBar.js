@@ -1,7 +1,7 @@
 import React from 'react';
 import "./NavBar.css"
 import {NavLink} from "react-router-dom";
-import BFLIXLOGO from "../../assets/pictures/BFLIX-30-9-2023.png"
+import bflixlogo from "../../assets/pictures/BFLIX-30-9-2023.png"
 
 export function NavBar() {
     return (
@@ -9,7 +9,7 @@ export function NavBar() {
             <ul>
                 <li className="imageWrapper">
                     <NavLink to="/">
-                        <img src={BFLIXLOGO} alt = "logo"/>
+                        <img src={bflixlogo} alt = "logo"/>
                     </NavLink>
                 </li>
                 <li className="homeButton">
