@@ -1,12 +1,12 @@
 <h1>FlixB</h1> 
-FlixB is an app i've made for those suffering from choice paralysis on from the gigantic offer of all the streaming services of what to watch. The app with a similar layout to one of the populair services offers highly rated series filtered on category on the main page for those looking for inspiration, a detail page accessible anywhere through the app with a lot of information about the series of their choosing and a search function with optional minimum rating for those looking for something specific.
+FlixB is an app i've made for those suffering from choice paralysis on from the gigantic offer of all the streaming services of what to watch. The app with a similar layout to one of the popular services offers highly rated series filtered on category on the main page for those looking for inspiration, a detail page accessible anywhere through the app with a lot of information about the series of their choosing and a search function with optional minimum rating for those looking for something specific.
 
 <h2>Architectural decisions</h2>
 I've chosen to use the framework React for this application. At this point in time it is the framework i know best and considering i've made this app with a deadline in mind it serves as the best way to show off my capabilities.
 
 Vue is the framework i plan to make a hobby project in this month ( october ) to familiarize myself with it a bit. 
 
-Here are the modules i've used that are neccesary to run the app as developer:
+Here are the modules i've used that are necessary to run the app as developer:
 
 * "axios": "1.5.1",
 * "react-router-dom": "6.16.0",
@@ -22,7 +22,10 @@ If you wish to purely see the app running i have it here on Netifly: https://bfl
 ![src](/src/assets/pictures/Example%20FlixB.PNG)
 
 <h2>Testing instructions</h2>
-TBA
+* "@testing-library/jest-dom": "^5.17.0",
+* "@testing-library/react": "^13.4.0",
+
+These are the testing modules i've used to make unit tests for the two components in this app which handle most of the complex logic. A simple npm run test will run them. Regrettably due to an issue with Axios testing the main pages is not possible at this moment. Despite searching online and implementing several suggested fixes for the 'SyntaxError: Cannot use import statement outside a module' none actually solved the issue i had.
 
 
 <h2>Wishlist</h2>
